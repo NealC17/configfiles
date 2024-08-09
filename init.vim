@@ -32,7 +32,6 @@ nnoremap <C-l> :call CocAtionAsync('jumpDefinition')<CR>
 inoremap <silent><expr> <Tab> pumvisible() ? coc#_select_confirm() : "\<Tab>"
 
 
-
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapseible="~"
 
