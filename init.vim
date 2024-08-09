@@ -6,7 +6,7 @@
 :set mouse=a
 
 
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
@@ -30,6 +30,8 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocAtionAsync('jumpDefinition')<CR>
 
 inoremap <silent><expr> <Tab> pumvisible() ? coc#_select_confirm() : "\<Tab>"
+
+
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapseible="~"
