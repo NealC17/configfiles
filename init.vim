@@ -21,19 +21,24 @@ Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 
+
+
+"Nerdtree
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapseible="~"
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-b> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocAtionAsync('jumpDefinition')<CR>
 
+"Coc
+nnoremap <C-l> :call CocAtionAsync('jumpDefinition')<CR>
 inoremap <silent><expr> <Tab> pumvisible() ? coc#_select_confirm() : "\<Tab>"
 
-
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapseible="~"
-
-
+"Vimtex
+let g:vimtex_view_method = 'zathura'
 
