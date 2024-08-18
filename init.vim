@@ -28,7 +28,7 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
 
 call plug#end()
 
-Nerdtree
+#Nerdtree
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapseible="~"
 nnoremap <C-f> :NERDTreeToggle<CR>
