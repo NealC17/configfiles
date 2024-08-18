@@ -24,8 +24,9 @@ Plug 'lervag/vimtex'
 Plug 'arzg/vim-colors-xcode'
 
 
+Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
-
 call plug#end()
 
 "Nerdtree
@@ -61,3 +62,15 @@ autocmd TermEnter trm://*toggleterm#*
 " For example: 2<C-t> will open terminal 2
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>e
+
+"magma-nvim
+nnoremap <silent><expr> <LocalLeader>w  :MagmaEvaluateOperator<CR>
+nnoremap <silent>       <LocalLeader>ww :MagmaEvaluateLine<CR>
+xnoremap <silent>       <LocalLeader>w  :<C-u>MagmaEvaluateVisual<CR>
+nnoremap <silent>       <LocalLeader>wc :MagmaReevaluateCell<CR>
+nnoremap <silent>       <LocalLeader>wd :MagmaDelete<CR>
+nnoremap <silent>       <LocalLeader>wo :MagmaShowOutput<CR>
+
+let g:magma_automatically_open_output = v:false
+let g:python3_host_prog = '/home/nealx/miniconda3/bin/python3'
+let g:magma_image_provider = "kitty"
